@@ -1,0 +1,83 @@
+Counter_Group,Regex,Counter_Description,Unit
+CxiPerfStats,^HNI_PKTS_SENT_BY_TC_\d+$,"Number of packets sent in traffic class <n>; 8 counters, default classes are 0 for request and 1 for response.",packets
+CxiPerfStats,^HNI_PKTS_RECV_BY_TC_\d+$,"Number of packets received in traffic class <n>; 8 counters, default classes are 0 for request and 1 for response.",packets
+CxiPerfStats,^HNI_TX_PAUSED_\d+$,Number of cycles in which the transmit path is paused for traffic class <n>; default classes are 0 for request and 1 for response. Indicates that this endpoint is supplying data faster than the network can deliver it. Divide by 1E9 to determine the proportion of time paused.,cycles
+CxiPerfStats,^HNI_RX_PAUSED_\d+$,Number of cycles in which the pause is applied on the receive path for traffic class <n>; default classes are 0 for request and 1 for response. Indicates that the network is supplying data faster than this endpoint can consume it. Divide by 1E9 to determine the proportion of time paused.,cycles
+CxiPerfStats,^PARBS_TARB_PI_POSTED_PKTS$,"Number of PCIe packets transferred using the posted path (for example, writes).",packets
+CxiPerfStats,^PARBS_TARB_PI_POSTED_BLOCKED_CNT$,Number of cycles in which this path is blocked. Compute the ratio cycles/pkts. Values of more than a few cycles per packet indicate back pressure from the host.,cycles
+CxiPerfStats,^PARBS_TARB_PI_NON_POSTED_PKTS$,"Number of PCIe packets transferred using the non-posted path (for example, reads).",packets
+CxiPerfStats,^PARBS_TARB_PI_NON_POSTED_BLOCKED_CNT$,Number of cycles in which this path is blocked. Compute the ratio cycles/pkts. Values of more than a few cycles per packet indicate per host performance issues.,cycles
+CxiPerfStats,^LPE_NET_MATCH_PRIORITY_\d+$,Number of messages matched on the priority list (or receive was posted before the message arrived). Lower‐cost direct writes.,messages
+CxiPerfStats,^LPE_NET_MATCH_OVERFLOW_\d+$,Number of messages delivered to an overflow buffer due to no priority match. Higher‐cost copies.,messages
+CxiPerfStats,^ATU_CACHE_MISS_\d+$,Number of misses in the NIC translation cache. Four counters (4 K / 2 M pages).,count
+CxiPerfStats,^ATU_CACHE_EVICTIONS_\d+$,Number of times a tag was evicted from the NIC translation cache.,count
+CxiErrStats,^PCT_SPT_TIMEOUTS$,Number of response timeouts (or packet loss).,count
+CxiErrStats,^PCT_SCT_TIMEOUTS$,Number of retry‐handler timeouts.,count
+CxiErrStats,^PCT_NO_TCT_NACKS$,Number of resource‐exhaustion NACKs.,count
+CxiErrStats,^PCT_NO_TRS_NACKS$,Number of TRS‐level NACKs.,count
+CxiErrStats,^PCT_NO_MST_NACKS$,Number of MST‐level NACKs.,count
+CxiErrStats,^PCT_RETRY_SRB_REQUESTS$,Number of retries by SRB.,count
+CxiErrStats,^PCT_TRS_RSP_NACK_DROPS$,Number of NACKs dropped.,count
+CxiErrStats,^HNI_PCS_UNCORRECTED_CW$,Number of uncorrected codewords received.,codewords
+CxiErrStats,^HNI_LLR_TX_REPLAY_EVENT$,Number of LLR replay events transmitted.,replays
+CxiErrStats,^HNI_LLR_RX_REPLAY_EVENT$,Number of LLR replay events detected.,replays
+CxiOpCommands,^CQ_DMA_CMD_COUNTS_\d+$,"Number of DMA‐type commands (Put, Get, atomics…).",commands
+CxiOpCommands,^CQ_CQ_CMD_COUNTS_\d+$,"Number of CQ commands (FENCE, LCID) and target cmds.",commands
+CxiOpCommands,^CQ_NUM_DMA_CMDS_\d+$,Number of DMA commands.,commands
+CxiOpCommands,^CQ_NUM_IDC_CMDS_\d+$,Number of immediate‐data commands.,commands
+CxiOpPackets,^HNI_TX_OK_\d+_to_\d+$,Number of packets sent in each size bin.,packets
+CxiOpPackets,^HNI_RX_OK_\d+_to_\d+$,Number of packets received in each size bin.,packets
+CxiOpPackets,^HNI_PKTS_SENT_BY_TC_\d+$,Number of packets sent in each traffic class.,packets
+CxiOpPackets,^HNI_PKTS_RECV_BY_TC_\d+$,Number of packets received in each traffic class.,packets
+CxiDmaEngine,^OXE_MCU_MEAS_\d+$,Number of flits sent by each MCU.,flits
+CxiDmaEngine,^OXE_CHANNEL_IDLE$,Number of idle cycles (bandwidth unused).,cycles
+CxiDmaEngine,^IXE_DISP_DMAWR_REQS$,Number of DMA‐write requests.,requests
+CxiDmaEngine,^IXE_DMAWR_STALL_P_CDT$,Number of stall cycles due to no posted credits.,cycles
+CxiDmaEngine,^IXE_DMAWR_STALL_NP_CDT$,Number of stall cycles due to no non-posted credits.,cycles
+CxiDmaEngine,^PI_PTI_TARB_MRD_PKTS$,Number of memory‐read TLPs.,TLPs
+CxiDmaEngine,^PI_PTI_TARB_MWR_PKTS$,Number of memory‐write TLPs.,TLPs
+CxiWritesToHost,^PARBS_TARB_PI_POSTED_PKTS$,Number of PCIe packets transferred (posted).,packets
+CxiWritesToHost,^PARBS_TARB_PI_POSTED_BLOCKED_CNT$,Number of blocked cycles (posted).,cycles
+CxiWritesToHost,^PARBS_TARB_PI_NON_POSTED_PKTS$,Number of PCIe packets transferred (non-posted).,packets
+CxiWritesToHost,^PARBS_TARB_PI_NON_POSTED_BLOCKED_CNT$,Number of blocked cycles (non-posted).,cycles
+CxiMessageMatchingPooled,^LPE_NET_MATCH_REQUESTS_\d+$,Number of match requests.,requests
+CxiMessageMatchingPooled,^LPE_NET_MATCH_PRIORITY_\d+$,Number of priority‐matched messages.,messages
+CxiMessageMatchingPooled,^LPE_NET_MATCH_OVERFLOW_\d+$,Number of overflow‐matched messages.,messages
+CxiMessageMatchingPooled,^LPE_NET_MATCH_REQUEST_\d+$,Number of request‐list matches.,requests
+CxiMessageMatchingPooled,^LPE_APPEND_CMDS$,Number of append commands.,commands
+CxiMessageMatchingPooled,^LPE_SEARCH_NID_ANY_\d+$,Number of NID_ANY wildcard searches.,searches
+CxiMessageMatchingPooled,^LPE_SEARCH_PID_ANY_\d+$,Number of PID_ANY wildcard searches.,searches
+CxiMessageMatchingPooled,^LPE_SEARCH_RANK_ANY_\d+$,Number of RANK_ANY wildcard searches.,searches
+CxiMessageMatchingPooled,^LPE_RNDZV_PUTS_\d+$,Number of rendezvous‐put operations.,rendezvous puts
+CxiMessageMatchingPooled,^LPE_RNDZV_PUTS_OFFLOADED_\d+$,Number of offloaded rendezvous puts.,rendezvous puts
+CxiMessageMatchingPooled,^LPE_AMO_CMDS$,Number of AMO commands.,commands
+CxiMessageMatchingPooled,^LPE_FAMO_CMDS$,Number of fetching AMO commands.,commands
+CxiTranslationUnit,^ATU_CACHE_MISS_\d+$,Number of translation‐cache misses.,count
+CxiTranslationUnit,^ATU_CLIENT_REQ_EE$,Number of EE client translation requests.,requests
+CxiTranslationUnit,^ATU_CLIENT_REQ_IXE$,Number of IXE client translation requests.,requests
+CxiTranslationUnit,^ATU_CLIENT_REQ_OXE$,Number of OXE client translation requests.,requests
+CxiTranslationUnit,^ATU_CACHE_MISS_EE$,Number of EE cache misses.,count
+CxiTranslationUnit,^ATU_CACHE_MISS_IXE$,Number of IXE cache misses.,count
+CxiTranslationUnit,^ATU_CACHE_MISS_OXE$,Number of OXE cache misses.,count
+CxiTranslationUnit,^ATU_CACHE_EVICTIONS$,Number of translation‐cache evictions.,count
+CxiTranslationUnit,^ATU_CACHE_HIT_BASE_PAGE_SIZE_\d+$,Number of base‐page cache hits.,count
+CxiTranslationUnit,^ATU_CACHE_HIT_DERIVATIVE1_PAGE_SIZE_\d+$,Number of derivative‐page cache hits.,count
+CxiTranslationUnit,^ATU_ATS_TRANS_LATENCY_\d+$,Number of ATS translation events per latency bin.,count
+CxiLatencyHist,^PCT_HOST_ACCESS_LATENCY_\d+$,Request/response latency histogram bin counts.,count
+CxiLatencyHist,^PCT_REQ_RSP_LATENCY_\d+$,Host access latency histogram bin counts.,count
+CxiPctReqRespTracking,^PCT_REQ_ORDERED$,Number of ordered requests.,count
+CxiPctReqRespTracking,^PCT_REQ_UNORDERED$,Number of unordered requests.,count
+CxiPctReqRespTracking,^PCT_RESPONSES_RECEIVED$,Number of responses received.,count
+CxiPctReqRespTracking,^PCT_CONN_SCT_OPEN$,Number of open connections.,count
+CxiPctReqRespTracking,^PCT_NO_TRS_NACKS$,Number of TRS‐level NACKs.,count
+CxiPctReqRespTracking,^PCT_RETRY_SRB_REQUESTS$,Number of retry SRB requests.,count
+CxiPctReqRespTracking,^PCT_SPT_TIMEOUTS$,Number of SPT timeouts.,count
+CxiPctReqRespTracking,^PCT_SCT_TIMEOUTS$,Number of SCT timeouts.,count
+CxiLinkReliability,^HNI_PCS_GOOD_CW$,Number of good codewords received.,codewords
+CxiLinkReliability,^HNI_PCS_CORRECTED_CW$,Number of corrected codewords received.,codewords
+CxiLinkReliability,^HNI_PCS_UNCORRECTED_CW$,Number of uncorrected codewords received.,codewords
+CxiLinkReliability,^HNI_LLR_TX_REPLAY_EVENT$,Number of LLR TX replay events.,replays
+CxiLinkReliability,^HNI_LLR_RX_REPLAY_EVENT$,Number of LLR RX replay events.,replays
+CxiCongestion,^HNI_RX_PAUSED_\d+$,Number of network‐asserted pause cycles per traffic class.,cycles
+CxiCongestion,^HNI_RX_PAUSED_STD$,Number of standard PCP pause cycles.,cycles
+CxiCongestion,^HNI_TX_PAUSED_\d+$,Number of NIC‐asserted pause cycles per traffic class.,cycles

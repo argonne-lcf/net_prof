@@ -1,0 +1,279 @@
+(/opt/aurora/24.347.0/frameworks/aurora_nre_models_frameworks-2025.0.0) kaushikvelusamy@x4306c7s6b0n0:/lus/flare/projects/datascience/kaushik/network/net-prof-tests/test2> ls
+ping.py
+(/opt/aurora/24.347.0/frameworks/aurora_nre_models_frameworks-2025.0.0) kaushikvelusamy@x4306c7s6b0n0:/lus/flare/projects/datascience/kaushik/network/net-prof-tests/test2> python ping.py 
+Scanning for telemetry under /sys/class/cxi
+Collecting interface 1 from /sys/class/cxi/cxi0/device/telemetry
+  [iface 1] Found 1890 files
+Collecting interface 2 from /sys/class/cxi/cxi1/device/telemetry
+  [iface 2] Found 1890 files
+Collecting interface 3 from /sys/class/cxi/cxi2/device/telemetry
+  [iface 3] Found 1890 files
+Collecting interface 4 from /sys/class/cxi/cxi3/device/telemetry
+  [iface 4] Found 1890 files
+Collecting interface 5 from /sys/class/cxi/cxi4/device/telemetry
+  [iface 5] Found 1890 files
+Collecting interface 6 from /sys/class/cxi/cxi5/device/telemetry
+  [iface 6] Found 1890 files
+Collecting interface 7 from /sys/class/cxi/cxi6/device/telemetry
+  [iface 7] Found 1890 files
+Collecting interface 8 from /sys/class/cxi/cxi7/device/telemetry
+  [iface 8] Found 1890 files
+Collected 15120 counters → /lus/flare/projects/datascience/kaushik/network/net-prof-tests/ping-test/before.json
+Scanning for telemetry under /sys/class/cxi
+Collecting interface 1 from /sys/class/cxi/cxi0/device/telemetry
+  [iface 1] Found 1890 files
+Collecting interface 2 from /sys/class/cxi/cxi1/device/telemetry
+  [iface 2] Found 1890 files
+Collecting interface 3 from /sys/class/cxi/cxi2/device/telemetry
+  [iface 3] Found 1890 files
+Collecting interface 4 from /sys/class/cxi/cxi3/device/telemetry
+  [iface 4] Found 1890 files
+Collecting interface 5 from /sys/class/cxi/cxi4/device/telemetry
+  [iface 5] Found 1890 files
+Collecting interface 6 from /sys/class/cxi/cxi5/device/telemetry
+  [iface 6] Found 1890 files
+Collecting interface 7 from /sys/class/cxi/cxi6/device/telemetry
+  [iface 7] Found 1890 files
+Collecting interface 8 from /sys/class/cxi/cxi7/device/telemetry
+  [iface 8] Found 1890 files
+Collected 15120 counters → /lus/flare/projects/datascience/kaushik/network/net-prof-tests/ping-test/after.json
+
+Total non-zero diffs: 1186
+
+Non-zero diffs by interface:
+  Interface 1 : 159
+
+  Interface 2 : 138
+
+  Interface 3 : 162
+
+  Interface 4 : 161
+
+  Interface 5 : 160
+
+  Interface 6 : 93
+
+  Interface 7 : 146
+
+  Interface 8 : 167
+
+Top 20 diffs for Interface 1:
+Rank  Metric ID   Metric Name                     Difference
+------------------------------------------------------------
+1     86          cq_cq_tou_num_idles            10609964400
+2     83          cq_cq_oxe_num_idles            10609964190
+3     1075        oxe_channel_idle               10609240883
+4     1889        tou_tou_oxe_num_idles          10608577912
+5     509         hni_pcs_good_cw                  414466170
+6     428         hni_llr_rx_ack_ctl_os            103617072
+7     448         hni_llr_tx_ack_ctl_os            103610857
+8     1016        mb_cmc_axi_rd_requests_1            125632
+9     584         hni_sts_rx_octets_ieee               34285
+10    587         hni_sts_rx_ok_octets                 34285
+11    585         hni_sts_rx_octets_multi              25537
+12    1019        mb_cmc_axi_wr_requests_0              3391
+13    1015        mb_cmc_axi_rd_requests_0              3016
+14    1767        pi_ipd_pri_rtrgt_tlps                 2155
+15    1812        pi_pri_mb_rtrgt_tlps                  2048
+16    1763        pi_ipd_pri_rtrgt_mrd_tlps             2046
+17    1797        pi_pri_mb_axi_rd_requests             2046
+18    1806        pi_pri_mb_rtrgt_mrd_tlps              2046
+19    1814        pi_pri_mb_xali_cmpl_tlps              2046
+20    1027        mb_crmc_axi_rd_requests_0             1116
+Total non-zero diffs not shown in Interface 1: 139
+
+Top 20 diffs for Interface 2:
+Rank  Metric ID   Metric Name                     Difference
+------------------------------------------------------------
+1     86          cq_cq_tou_num_idles            10607188812
+2     83          cq_cq_oxe_num_idles            10607188674
+3     1075        oxe_channel_idle               10606873515
+4     1889        tou_tou_oxe_num_idles          10606602848
+5     509         hni_pcs_good_cw                  414362654
+6     428         hni_llr_rx_ack_ctl_os            103590898
+7     448         hni_llr_tx_ack_ctl_os            103584737
+8     1016        mb_cmc_axi_rd_requests_1            126076
+9     584         hni_sts_rx_octets_ieee               25759
+10    585         hni_sts_rx_octets_multi              25759
+11    587         hni_sts_rx_ok_octets                 25759
+12    1019        mb_cmc_axi_wr_requests_0              3394
+13    1015        mb_cmc_axi_rd_requests_0              3028
+14    1767        pi_ipd_pri_rtrgt_tlps                 2065
+15    1812        pi_pri_mb_rtrgt_tlps                  2061
+16    1763        pi_ipd_pri_rtrgt_mrd_tlps             2058
+17    1797        pi_pri_mb_axi_rd_requests             2058
+18    1806        pi_pri_mb_rtrgt_mrd_tlps              2058
+19    1814        pi_pri_mb_xali_cmpl_tlps              2058
+20    1027        mb_crmc_axi_rd_requests_0             1116
+Total non-zero diffs not shown in Interface 2: 118
+
+Top 20 diffs for Interface 3:
+Rank  Metric ID   Metric Name                     Difference
+------------------------------------------------------------
+1     86          cq_cq_tou_num_idles            10605188192
+2     83          cq_cq_oxe_num_idles            10605187202
+3     1075        oxe_channel_idle               10604586627
+4     1889        tou_tou_oxe_num_idles          10604422536
+5     509         hni_pcs_good_cw                  414282195
+6     428         hni_llr_rx_ack_ctl_os            103570723
+7     448         hni_llr_tx_ack_ctl_os            103565477
+8     1016        mb_cmc_axi_rd_requests_1            127062
+9     584         hni_sts_rx_octets_ieee               33087
+10    587         hni_sts_rx_ok_octets                 33087
+11    585         hni_sts_rx_octets_multi              26203
+12    1019        mb_cmc_axi_wr_requests_0              3726
+13    1015        mb_cmc_axi_rd_requests_0              2459
+14    1767        pi_ipd_pri_rtrgt_tlps                 2232
+15    1812        pi_pri_mb_rtrgt_tlps                  2087
+16    1763        pi_ipd_pri_rtrgt_mrd_tlps             2082
+17    1797        pi_pri_mb_axi_rd_requests             2082
+18    1806        pi_pri_mb_rtrgt_mrd_tlps              2082
+19    1814        pi_pri_mb_xali_cmpl_tlps              2082
+20    1027        mb_crmc_axi_rd_requests_0             1104
+Total non-zero diffs not shown in Interface 3: 142
+
+Top 20 diffs for Interface 4:
+Rank  Metric ID   Metric Name                     Difference
+------------------------------------------------------------
+1     83          cq_cq_oxe_num_idles            10602864342
+2     86          cq_cq_tou_num_idles            10602863852
+3     1075        oxe_channel_idle               10602844459
+4     1889        tou_tou_oxe_num_idles          10602815452
+5     509         hni_pcs_good_cw                  414197490
+6     428         hni_llr_rx_ack_ctl_os            103549599
+7     448         hni_llr_tx_ack_ctl_os            103544384
+8     1016        mb_cmc_axi_rd_requests_1            126971
+9     584         hni_sts_rx_octets_ieee               31085
+10    587         hni_sts_rx_ok_octets                 31085
+11    585         hni_sts_rx_octets_multi              26277
+12    1019        mb_cmc_axi_wr_requests_0              3721
+13    1015        mb_cmc_axi_rd_requests_0              2461
+14    1767        pi_ipd_pri_rtrgt_tlps                 2225
+15    1812        pi_pri_mb_rtrgt_tlps                  2087
+16    1763        pi_ipd_pri_rtrgt_mrd_tlps             2082
+17    1797        pi_pri_mb_axi_rd_requests             2082
+18    1806        pi_pri_mb_rtrgt_mrd_tlps              2082
+19    1814        pi_pri_mb_xali_cmpl_tlps              2082
+20    1027        mb_crmc_axi_rd_requests_0             1104
+Total non-zero diffs not shown in Interface 4: 141
+
+Top 20 diffs for Interface 5:
+Rank  Metric ID   Metric Name                     Difference
+------------------------------------------------------------
+1     86          cq_cq_tou_num_idles            10600958940
+2     1075        oxe_channel_idle               10600939279
+3     83          cq_cq_oxe_num_idles            10600938078
+4     1889        tou_tou_oxe_num_idles          10600784660
+5     509         hni_pcs_good_cw                  414120760
+6     428         hni_llr_rx_ack_ctl_os            103530141
+7     448         hni_llr_tx_ack_ctl_os            103524896
+8     1016        mb_cmc_axi_rd_requests_1            125556
+9     584         hni_sts_rx_octets_ieee               36680
+10    587         hni_sts_rx_ok_octets                 36680
+11    585         hni_sts_rx_octets_multi              26344
+12    1019        mb_cmc_axi_wr_requests_0              3720
+13    1015        mb_cmc_axi_rd_requests_0              2457
+14    1767        pi_ipd_pri_rtrgt_tlps                 2188
+15    1812        pi_pri_mb_rtrgt_tlps                  2036
+16    1763        pi_ipd_pri_rtrgt_mrd_tlps             2034
+17    1797        pi_pri_mb_axi_rd_requests             2034
+18    1806        pi_pri_mb_rtrgt_mrd_tlps              2034
+19    1814        pi_pri_mb_xali_cmpl_tlps              2034
+20    1027        mb_crmc_axi_rd_requests_0             1104
+Total non-zero diffs not shown in Interface 5: 140
+
+Top 20 diffs for Interface 6:
+Rank  Metric ID   Metric Name                     Difference
+------------------------------------------------------------
+1     1075        oxe_channel_idle               10599158003
+2     83          cq_cq_oxe_num_idles            10599144470
+3     86          cq_cq_tou_num_idles            10599143764
+4     1889        tou_tou_oxe_num_idles          10598974556
+5     509         hni_pcs_good_cw                  414051846
+6     428         hni_llr_rx_ack_ctl_os            103512868
+7     448         hni_llr_tx_ack_ctl_os            103507587
+8     1016        mb_cmc_axi_rd_requests_1            124763
+9     584         hni_sts_rx_octets_ieee               26714
+10    585         hni_sts_rx_octets_multi              26714
+11    587         hni_sts_rx_ok_octets                 26714
+12    1019        mb_cmc_axi_wr_requests_0              3731
+13    1015        mb_cmc_axi_rd_requests_0              2451
+14    1767        pi_ipd_pri_rtrgt_tlps                 2037
+15    1812        pi_pri_mb_rtrgt_tlps                  2036
+16    1763        pi_ipd_pri_rtrgt_mrd_tlps             2034
+17    1797        pi_pri_mb_axi_rd_requests             2034
+18    1806        pi_pri_mb_rtrgt_mrd_tlps              2034
+19    1814        pi_pri_mb_xali_cmpl_tlps              2034
+20    1027        mb_crmc_axi_rd_requests_0             1092
+Total non-zero diffs not shown in Interface 6: 73
+
+Top 20 diffs for Interface 7:
+Rank  Metric ID   Metric Name                     Difference
+------------------------------------------------------------
+1     1075        oxe_channel_idle               10597366595
+2     86          cq_cq_tou_num_idles            10597292708
+3     83          cq_cq_oxe_num_idles            10597291370
+4     1889        tou_tou_oxe_num_idles          10597176636
+5     509         hni_pcs_good_cw                  413982455
+6     428         hni_llr_rx_ack_ctl_os            103495387
+7     448         hni_llr_tx_ack_ctl_os            103490132
+8     1016        mb_cmc_axi_rd_requests_1            125241
+9     584         hni_sts_rx_octets_ieee               33534
+10    587         hni_sts_rx_ok_octets                 33534
+11    585         hni_sts_rx_octets_multi              26936
+12    1019        mb_cmc_axi_wr_requests_0              3743
+13    1015        mb_cmc_axi_rd_requests_0              2517
+14    1767        pi_ipd_pri_rtrgt_tlps                 2408
+15    1812        pi_pri_mb_rtrgt_tlps                  2049
+16    1763        pi_ipd_pri_rtrgt_mrd_tlps             2046
+17    1797        pi_pri_mb_axi_rd_requests             2046
+18    1806        pi_pri_mb_rtrgt_mrd_tlps              2046
+19    1814        pi_pri_mb_xali_cmpl_tlps              2046
+20    1027        mb_crmc_axi_rd_requests_0             1093
+Total non-zero diffs not shown in Interface 7: 126
+
+Top 20 diffs for Interface 8:
+Rank  Metric ID   Metric Name                     Difference
+------------------------------------------------------------
+1     1075        oxe_channel_idle               10595478582
+2     86          cq_cq_tou_num_idles            10595468924
+3     83          cq_cq_oxe_num_idles            10595466684
+4     1889        tou_tou_oxe_num_idles          10595306404
+5     509         hni_pcs_good_cw                  413910760
+6     428         hni_llr_rx_ack_ctl_os            103477540
+7     448         hni_llr_tx_ack_ctl_os            103472231
+8     260         cq_tx_waiting_on_read_0             276195
+9     1016        mb_cmc_axi_rd_requests_1            125311
+10    590         hni_sts_tx_octets_ieee               44498
+11    593         hni_sts_tx_ok_octets                 44498
+12    584         hni_sts_rx_octets_ieee               32558
+13    587         hni_sts_rx_ok_octets                 32558
+14    585         hni_sts_rx_octets_multi              27010
+15    182         cq_sts_dma_payload_data_0            24478
+16    234         cq_sts_idc_payload_data_0            16692
+17    1019        mb_cmc_axi_wr_requests_0              3390
+18    1767        pi_ipd_pri_rtrgt_tlps                 2877
+19    1015        mb_cmc_axi_rd_requests_0              2296
+20    1812        pi_pri_mb_rtrgt_tlps                  2049
+Total non-zero diffs not shown in Interface 8: 147
+
+Important Metrics (diffs by interface):
+Metric ID       Metric Name                              Iface1          Iface2          Iface3          Iface4          Iface5          Iface6          Iface7          Iface8         
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+17              atu_cache_evictions                      0               0               0               0               0               0               0               0              
+18              atu_cache_hit_base_page_size_0           20              1               44              42              27              0               95              86             
+22              atu_cache_hit_derivative1_page_size_0    0               0               0               0               0               0               0               0              
+564             hni_rx_paused_0                          0               0               0               0               0               0               0               0              
+565             hni_rx_paused_1                          0               0               0               0               0               0               0               0              
+613             hni_tx_paused_0                          0               0               0               0               0               0               0               0              
+614             hni_tx_paused_1                          0               0               0               0               0               0               0               0              
+835             lpe_net_match_overflow_0                 0               0               0               0               0               0               0               0              
+839             lpe_net_match_priority_0                 14              0               6               4               16              0               1               0              
+869             lpe_rndzv_puts_0                         0               0               0               0               0               0               0               0              
+873             lpe_rndzv_puts_offloaded_0               0               0               0               0               0               0               0               0              
+1597            parbs_tarb_pi_non_posted_blocked_cnt     0               0               0               0               0               0               0               0              
+1598            parbs_tarb_pi_non_posted_pkts            4               1               2               3               5               1               1               511            
+1599            parbs_tarb_pi_posted_blocked_cnt         0               0               0               0               0               0               0               0              
+1600            parbs_tarb_pi_posted_pkts                108             4               160             146             134             1               292             738            
+1724            pct_trs_rsp_nack_drops                   0               0               0               0               0               0               0               0              
+(/opt/aurora/24.347.0/frameworks/aurora_nre_models_frameworks-2025.0.0) kaushikvelusamy@x4306c7s6b0n0:/lus/flare/projects/datascience/kaushik/network/net-prof-tests/test2> 
